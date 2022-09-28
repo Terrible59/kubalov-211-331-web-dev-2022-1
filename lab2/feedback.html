@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Обратная связь</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="main">
+		<div class="container">
+			<form action="https://httpbin.org/post" method="POST" class="feedback-form">
+				<h2 class="heading">Обратная связь</h2>
+				<label for="name" class="feedback-form__label label">
+					<span>Имя</span>
+					<input type="text" class="feedback-form__input input" id="name" name="name" required>
+				</label>
+				<label for="email" class="feedback-form__label label">
+					<span>E-mail</span>
+					<input type="email" class="feedback-form__input input" id="email" name="email" required>
+				</label>
+
+				<h3 class="feedback-form__heading">Откуда о нас узнали?</h3>
+
+				<label for="where1" class="feedback-form__label label label_radio">
+					<input type="radio" class="feedback-form__input input input_radio" id="where1" name="where" value="1">
+					<span>Реклама</span>
+				</label>
+				<label for="where2" class="feedback-form__label label label_radio">
+					<input type="radio" class="feedback-form__input input input_radio" id="where2" name="where" value="2">
+					<span>Друзья/знакомые</span>
+				</label>
+				<label for="where3" class="feedback-form__label label label_radio">
+					<input type="radio" class="feedback-form__input input input_radio" id="where3" name="where" value="3">
+					<span>Другое</span>
+				</label>
+
+				<select name="type" id="type" class="select">
+					<option value="1">Обращение 1</option>
+					<option value="1">Обращение 2</option>
+					<option value="1">Обращение 3</option>
+				</select>
+
+				<input type="file" class="file">
+
+				<label for="text" class="feedback-form__label label">
+					<span>Текст сообщения</span>
+					<textarea name="text" id="text" class="input input_area"></textarea>
+				</label>
+
+				<label for="check" class="label label_check">
+					<input type="checkbox" id="check" class="check" name="agreement">
+					Даю согласие на обработку персональных данных
+				</label>
+
+				<button class="btn" type="submit">Отправить</button>
+			</form>
+		</div>
+	</main>
+</body>
+</html>
